@@ -1,0 +1,6 @@
+{
+  "name": "TMP36",
+  "author": "PlantNet",
+  "pins": ["+VS", "VOUT", "GND"],
+  "controls": [{ "id": "temperature", "label": "Temperature (°C)", "type": "range", "min": 0, "max": 60, "step": 0.5 }]
+}

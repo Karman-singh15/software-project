@@ -1,0 +1,6 @@
+{
+  "name": "Water Level",
+  "author": "PlantNet",
+  "pins": ["S", "+", "-"],
+  "controls": [{ "id": "level", "label": "Submerged (%)", "type": "range", "min": 0, "max": 100, "step": 1 }]
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Soil Moisture",
+  "author": "PlantNet",
+  "pins": ["VCC", "GND", "DO", "AO"],
+  "controls": [{ "id": "moisture", "label": "Moisture (%)", "type": "range", "min": 0, "max": 100, "step": 1 }]
+}

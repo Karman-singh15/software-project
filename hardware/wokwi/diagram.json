@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "author": "PlantNet",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard",
+      "id": "bb1",
+      "top": 150,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-esp32-devkit-v1",
+      "id": "esp",
+      "top": 170,
+      "left": -190,
+      "attrs": {}
+    },
+    {
+      "type": "chip-soil",
+      "id": "soil",
+      "top": 20,
+      "left": 110,
+      "attrs": {}
+    },
+    {
+      "type": "chip-water",
+      "id": "water",
+      "top": 20,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "chip-bh1750",
+      "id": "bh",
+      "top": 20,
+      "left": 480,
+      "attrs": {}
+    },
+    {
+      "type": "chip-lm35",
+      "id": "lm35",
+      "top": 420,
+      "left": 420,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "esp:TX0",
+      "$serialMonitor:RX",
+      "",
+      []
+    ],
+    [
+      "esp:RX0",
+      "$serialMonitor:TX",
+      "",
+      []
+    ],
+    [
+      "esp:3V3",
+      "bb1:tp.1",
+      "red",
+      []
+    ],
+    [
+      "esp:GND.1",
+      "bb1:tn.1",
+      "black",
+      []
+    ],
+    [
+      "esp:VIN",
+      "bb1:bp.1",
+      "orange",
+      []
+    ],
+    [
+      "bb1:tn.50",
+      "bb1:bn.50",
+      "black",
+      []
+    ],
+    [
+      "soil:VCC",
+      "bb1:tp.8",
+      "red",
+      []
+    ],
+    [
+      "soil:GND",
+      "bb1:tn.9",
+      "black",
+      []
+    ],
+    [
+      "soil:AO",
+      "esp:D34",
+      "green",
+      []
+    ],
+    [
+      "water:+",
+      "bb1:tp.20",
+      "red",
+      []
+    ],
+    [
+      "water:-",
+      "bb1:tn.21",
+      "black",
+      []
+    ],
+    [
+      "water:S",
+      "esp:D32",
+      "blue",
+      []
+    ],
+    [
+      "bh:VCC",
+      "bb1:tp.32",
+      "red",
+      []
+    ],
+    [
+      "bh:GND",
+      "bb1:tn.33",
+      "black",
+      []
+    ],
+    [
+      "bh:ADDR",
+      "bb1:tn.34",
+      "black",
+      []
+    ],
+    [
+      "bh:SCL",
+      "esp:D22",
+      "yellow",
+      []
+    ],
+    [
+      "bh:SDA",
+      "esp:D21",
+      "white",
+      []
+    ],
+    [
+      "lm35:+VS",
+      "bb1:bp.40",
+      "orange",
+      []
+    ],
+    [
+      "lm35:GND",
+      "bb1:bn.41",
+      "black",
+      []
+    ],
+    [
+      "lm35:VOUT",
+      "esp:D35",
+      "violet",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

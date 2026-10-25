@@ -1,0 +1,6 @@
+{
+  "name": "BH1750",
+  "author": "PlantNet",
+  "pins": ["VCC", "GND", "SCL", "SDA", "ADDR"],
+  "controls": [{ "id": "lux", "label": "Light (lux)", "type": "range", "min": 0, "max": 50000, "step": 10 }]
+}

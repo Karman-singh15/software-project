@@ -1,0 +1,55 @@
+{
+  "expo": {
+    "name": "PlantNet",
+    "slug": "plantnet",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "plantnet",
+    "userInterfaceStyle": "dark",
+    "backgroundColor": "#080F0D",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Take growth photos of your plants.",
+        "NSPhotoLibraryUsageDescription": "Attach photos to your plant's growth timeline."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#080F0D",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#080F0D",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 76
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "PlantNet uses your photos for the plant growth timeline.",
+          "cameraPermission": "PlantNet uses the camera for plant growth photos."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": false,
+      "reactCompiler": false
+    }
+  }
+}
